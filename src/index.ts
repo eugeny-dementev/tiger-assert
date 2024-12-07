@@ -2,8 +2,9 @@ import yamlifyObject from "yamlify-object";
 
 const isPlainObject = (value: object) => value?.constructor === Object;
 
-function addIndention(str: string) {
-  return str.split('\n').join('\n    ')
+function addIndention (str: string) {
+  return str.split('\n')
+    .join('\n    ')
 }
 
 type Context = Record<string, unknown>
@@ -11,7 +12,7 @@ type Context = Record<string, unknown>
 class TigerAssertionError extends Error {
   #context: Context
 
-  constructor(message: string, context: Context) {
+  constructor (message: string, context: Context) {
     super(message)
     this.name = 'TigerAssertionError';
     this.#context = context
@@ -33,7 +34,7 @@ class TigerAssertionError extends Error {
  * @param {string} message - A descriptive message explaining the assertion failure.
  * @param {object} context - An object containing values related to the condition, for debugging purposes.
  */
-export function assert(condition: boolean, message: string, context: Context) {
+export function assert (condition: boolean, message: string, context: Context) {
   if (!isPlainObject(context)) {
     throw new TypeError('provided "context" must be a plain js object')
   }
