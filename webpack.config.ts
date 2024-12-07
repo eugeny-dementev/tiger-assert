@@ -1,31 +1,55 @@
 const path = require('path');
 
-module.exports = {
-  mode: 'development',
-  devtool: 'source-map',
-  entry: './src/assert.ts',
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        use: 'ts-loader',
-        exclude: '/node_modules/',
-      },
-    ],
-  },
-  resolve: {
-    extensions: ['.ts'],
-  },
-  output: {
-    filename: 'assert.js',
-    path: path.resolve(__dirname, 'dist'),
-    library: {
-      name:'tigerAssert',
-      type: 'umd',
+module.exports = [
+  // UMD Build
+  {
+    entry: './src/assert.ts',
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'assert.umd.js', // File name for UMD build
+      library: 'TigerAssert', // Global variable for browser usage
+      libraryTarget: 'umd', // Universal Module Definition (UMD)
+      globalObject: 'this', // Ensures compatibility with Node.js and browsers
     },
-    globalObject: 'this',
-    clean: true,
+    module: {
+      rules: [
+        {
+          test: /\.ts$/,
+          exclude: /node_modules/,
+          use: 'ts-loader',
+        },
+      ],
+    },
+    resolve: {
+      extensions: ['.ts', '.js'],
+    },
+    mode: 'production',
   },
-};
-
-
+  // ES Module Build
+  {
+    entry: './src/assert.ts',
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'assert.esm.js', // File name for ES module build
+      library: {
+        type: 'module', // Output as ES module
+      },
+    },
+    experiments: {
+      outputModule: true, // Enable module output
+    },
+    module: {
+      rules: [
+        {
+          test: /\.ts$/,
+          exclude: /node_modules/,
+          use: 'ts-loader',
+        },
+      ],
+    },
+    resolve: {
+      extensions: ['.ts', '.js'],
+    },
+    mode: 'production',
+  },
+];

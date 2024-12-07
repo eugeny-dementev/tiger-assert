@@ -1,9 +1,10 @@
 {
   "name": "tiger-assert",
-  "version": "0.1.0",
-  "description": "Inspired by Tiger Style assert package to provide context on asserted errors",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "version": "0.4.0",
+  "main": ".dist/assert.umd.js",
+  "module": ".dist/assert.esm.js",
+  "types": ".dist/index.d.ts",
+  "browser": ".dist/assert.umd.js",
   "engines": {
     "node": ">=12.0.0"
   },
@@ -31,6 +32,9 @@
     "type": "git",
     "url": "git+https://github.com/eugeny-dementev/tiger-assert.git"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "assert",
     "tiger",
