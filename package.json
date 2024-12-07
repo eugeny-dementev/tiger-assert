@@ -1,0 +1,29 @@
+{
+  "name": "tiger-assert",
+  "version": "0.0.1",
+  "description": "Inspired by Tiger Style assert package to provide context on asserted errors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugeny-dementev/tiger-assert.git"
+  },
+  "keywords": [
+    "assert",
+    "tiger",
+    "style",
+    "error",
+    "context"
+  ],
+  "author": "Eugeny Dementev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eugeny-dementev/tiger-assert/issues"
+  },
+  "homepage": "https://github.com/eugeny-dementev/tiger-assert#readme",
+  "dependencies": {
+    "yamlify-object": "^2.0.0"
+  }
+}
