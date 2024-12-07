@@ -1,6 +1,6 @@
 {
   "name": "tiger-assert",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Inspired by Tiger Style assert package to provide context on asserted errors",
   "main": "index.mjs",
   "scripts": {
