@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   devtool: 'source-map',
-  entry: './src/index.ts',
+  entry: './src/assert.ts',
   module: {
     rules: [
       {
@@ -17,14 +17,15 @@ module.exports = {
     extensions: ['.ts'],
   },
   output: {
-    filename: 'yamlify-object.js',
+    filename: 'assert.js',
     path: path.resolve(__dirname, 'dist'),
     library: {
-      name:'yamlifyObject',
+      name:'tigerAssert',
       type: 'umd',
-      export: 'default',
     },
     globalObject: 'this',
     clean: true,
   },
 };
+
+
