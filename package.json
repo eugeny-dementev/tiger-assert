@@ -1,6 +1,6 @@
 {
   "name": "tiger-assert",
-  "version": "0.11.0",
+  "version": "1.0.0",
   "description": "Assertiong library inspired by Tiger Style",
   "scripts": {
     "compile": "tsc --project ./tsconfig.json",
