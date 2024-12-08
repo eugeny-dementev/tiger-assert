@@ -3,7 +3,7 @@
 Tiger Assertion is a lightweight utility for validating conditions in your JavaScript/TypeScript applications.
 It throws detailed errors enriched with structured context, helping developers debug issues more effectively.
 
-Inspired by by 
+Inspired by assertions approach used as part of [Tiger Style](https://tigerstyle.dev)
 
 ## Features
 
