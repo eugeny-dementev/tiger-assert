@@ -1,15 +1,9 @@
 {
+  "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
-    "module": "es6",
-    "target": "es2015",
-    "declaration": true,
-    "outDir": "./dist",
-    "sourceMap": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "allowJs": false
+    "outDir": "./built",
+    "noImplicitAny": false,
+    "inlineSourceMap": true,
   },
-  "include": [
-    "src/**/*"
-  ]
+  "include": ["./src/*.ts"]
 }

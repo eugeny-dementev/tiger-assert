@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "outDir": "./built/_esm/",
+    "inlineSourceMap": false
+  },
+  "exclude": ["./src/*.test.ts"]
+}
